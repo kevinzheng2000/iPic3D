@@ -1,0 +1,12 @@
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/rebuild_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/edit_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/test.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/iPic3D.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/CMakeFiles/rebuild_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/CMakeFiles/edit_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/CMakeFiles/test.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/CMakeFiles/iPic3Dlib.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/H5hut-io/CMakeFiles/rebuild_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/H5hut-io/CMakeFiles/edit_cache.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/H5hut-io/CMakeFiles/test.dir
+/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/H5hut-io/CMakeFiles/H5hut-io.dir

@@ -1,0 +1,41 @@
+Performing C SOURCE FILE Test MULTIPASS_TEST_1_petsc_works_minimal failed with the following compile output:
+Change Dir: /Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f5b92/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f5b92.dir/build.make CMakeFiles/cmTC_f5b92.dir/build
+Building C object CMakeFiles/cmTC_f5b92.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc  -I/Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include  -DMULTIPASS_TEST_1_petsc_works_minimal -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_f5b92.dir/src.c.o   -c /Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/CMakeTmp/src.c
+In file included from /Users/kevinzheng/ipic_tests/iPic3D-git/build/CMakeFiles/CMakeTmp/src.c:3:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscts.h:7:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscsnes.h:6:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscksp.h:6:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscpc.h:6:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscmat.h:6:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscvec.h:9:
+In file included from /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscis.h:7:
+/Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscsys.h:130:10: fatal error: 'mpi.h' file not found
+#include <mpi.h>
+         ^~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_f5b92.dir/src.c.o] Error 1
+make: *** [cmTC_f5b92/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+static const char help[] = "PETSc test program.";
+#include <petscts.h>
+int main(int argc,char *argv[]) {
+  PetscErrorCode ierr;
+  TS ts;
+
+  ierr = PetscInitialize(&argc,&argv,0,help);CHKERRQ(ierr);
+  ierr = TSCreate(PETSC_COMM_WORLD,&ts);CHKERRQ(ierr);
+  ierr = TSSetFromOptions(ts);CHKERRQ(ierr);
+  ierr = TSDestroy(&ts);CHKERRQ(ierr);
+  ierr = PetscFinalize();CHKERRQ(ierr);
+  return 0;
+}
+

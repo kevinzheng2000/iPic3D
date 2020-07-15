@@ -95,6 +95,7 @@ int c_Solver::Init(int argc, char **argv) {
     else if (col->getCase()=="FluxRope")  EMf->initFluxRope(vct,grid,col);
     else if (col->getCase()=="GEMNoVelShear")  EMf->initHarrisNoVelShear(vct, grid,col);
     else if (col->getCase()=="Relativistic")  EMf->init(vct, grid, col);
+    else if (col->getCase()=="Shear_flow")  EMf->init(vct, grid, col);
     else {
       if (myrank==0) {
         cout << " =========================================================== " << endl;
@@ -146,6 +147,7 @@ int c_Solver::Init(int argc, char **argv) {
         else if (col->getCase()=="WhistlerKappa")    part[i].kappa(grid, EMf, vct);
         else if (col->getCase()=="GEMRelativity")    part[i].relativistic_maxwellian(grid, EMf, vct);
         else if (col->getCase()=="Relativistic")  part[i].twostream1D(grid, vct, 3);
+        else if (col->getCase()=="Shear_flow")  part[i].shear_flow_relativistic(grid, vct, col);
         else if (col->getCase()=="GEM" || col->getCase()=="GEMNoVelShear"){
         	if(i<2)
         		part[i].maxwellian(grid, EMf, vct);
@@ -358,7 +360,7 @@ bool c_Solver::ParticlesMover() {
 	  else{
 		  // #pragma omp task inout(part[i]) in(grid) target_device(booster)
 		  //mem_avail = part[i].mover_PC_sub(grid, vct, EMf); // use the Predictor Corrector scheme
-		  if(col->getCase()=="GEMRelativity" || col->getCase()=="Relativistic")
+		  if(col->getCase()=="GEMRelativity" || col->getCase()=="Relativistic" || col->getCase()=="Shear_flow")
 			  mem_avail = part[i].mover_relativistic(grid, vct, EMf);
 		  else
 			  mem_avail = part[i].mover_PC_old(grid, vct, EMf); // use the Predictor Corrector scheme
