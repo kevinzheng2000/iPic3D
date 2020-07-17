@@ -147,7 +147,7 @@ int c_Solver::Init(int argc, char **argv) {
         else if (col->getCase()=="WhistlerKappa")    part[i].kappa(grid, EMf, vct);
         else if (col->getCase()=="GEMRelativity")    part[i].relativistic_maxwellian(grid, EMf, vct);
         else if (col->getCase()=="Relativistic")  part[i].twostream1D(grid, vct, 3);
-        else if (col->getCase()=="Shear_flow")  part[i].shear_flow_relativistic(grid, vct, col);
+        else if (col->getCase()=="Shear_flow")  part[i].shear_flow_relativistic(grid, vct);
         else if (col->getCase()=="GEM" || col->getCase()=="GEMNoVelShear"){
         	if(i<2)
         		part[i].maxwellian(grid, EMf, vct);

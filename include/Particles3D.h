@@ -129,7 +129,7 @@ class Particles3D:public Particles3Dcomm {
     /*! Initiate dist. func. for a single cell form a fluid model (BATSRUS) */
     void MaxwellianFromFluidCell(Grid* grid, Collective *col, int is, int i, int j, int k, int &ip, double *x, double *y, double *z, double *q, double *vx, double *vy, double *vz, unsigned long* ParticleID);
     void twostream1D(Grid * grid, VirtualTopology3D * vct, int mode);
-    void shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, Collective *col);
+    void shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct);
 
 };
 

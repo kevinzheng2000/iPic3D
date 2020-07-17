@@ -1850,7 +1850,7 @@ void Particles3D::twostream1D(Grid * grid, VirtualTopology3D * vct, int mode) {
 
 
 /** initializing a relativistic shear flow */
-void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, Collective *col) {
+void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct) {
 
   /* initialize random generator with different seed on different processor */
   srand(vct->getCartesian_rank() + 2 + 10*ns);
@@ -1859,7 +1859,7 @@ void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, 
   double harvest;
   double prob, theta, sign;
   long long counter = 0;
-  double y_boundary = 0.25 * col->getLy();
+  double reverser;
     
   for (int i = 1; i < grid->getNXC() - 1; i++)
     for (int j = 1; j < grid->getNYC() - 1; j++)
@@ -1870,6 +1870,10 @@ void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, 
               x[counter] = (ii + .5) * (dx / npcelx) + grid->getXN(i, j, k);
               y[counter] = (jj + .5) * (dy / npcely) + grid->getYN(i, j, k);
               z[counter] = (kk + .5) * (dz / npcelz) + grid->getZN(i, j, k);
+
+              reverser = -1.0;
+              if ((y[counter] < 0.75*Ly) && (y[counter] > 0.25*Ly)) reverser = 1.0;
+
               // q = charge
               q[counter] = (qom / fabs(qom)) * (rhoINIT / npcel) * (1.0 / grid->getInvVOL());
               // u
@@ -1877,7 +1881,7 @@ void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, 
               prob = sqrt(-2.0 * log(1.0 - .999999 * harvest));
               harvest = rand() / (double) RAND_MAX;
               theta = 2.0 * M_PI * harvest;
-              mxp = u0 / sqrt(1.0 - u0*u0) + uth / sqrt(1.0 - uth*uth) * prob * cos(theta);
+              mxp = reverser * u0 / sqrt(1.0 - u0*u0) + uth / sqrt(1.0 - uth*uth) * prob * cos(theta);
               // v
               myp = v0 / sqrt(1.0 - v0*v0) + vth / sqrt(1.0 - vth*vth) * prob * sin(theta);
               // w
@@ -1891,8 +1895,7 @@ void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct, 
               u[counter] = mxp / g;
               v[counter] = myp / g;
               w[counter] = mzp / g;
-              if ((y[counter] <= - y_boundary) || (y[counter] >= y_boundary))
-                u[counter] *= -1;
+
               if (TrackParticleID)
                 ParticleID[counter] = counter * (unsigned long) pow(10.0, BirthRank[1]) + BirthRank[0];
 
