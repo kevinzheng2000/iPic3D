@@ -1906,6 +1906,62 @@ void Particles3D::shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct) 
 }
 
 
+//initialize a shear flow structure with hyperbolic distribution function
+void Particles3D::shear_flow_hyperbolic(Grid * grid, VirtualTopology3D * vct, double Llayer) {
+
+  /* initialize random generator with different seed on different processor */
+  srand(vct->getCartesian_rank() + 2 + 10*ns);
+
+  double mxp, myp, mzp;
+  double harvest;
+  double prob, theta, sign;
+  long long counter = 0;
+  double reverser;
+    
+  for (int i = 1; i < grid->getNXC() - 1; i++)
+    for (int j = 1; j < grid->getNYC() - 1; j++)
+      for (int k = 1; k < grid->getNZC() - 1; k++)
+        for (int ii = 0; ii < npcelx; ii++)
+          for (int jj = 0; jj < npcely; jj++)
+            for (int kk = 0; kk < npcelz; kk++) {
+              x[counter] = (ii + .5) * (dx / npcelx) + grid->getXN(i, j, k);
+              y[counter] = (jj + .5) * (dy / npcely) + grid->getYN(i, j, k);
+              z[counter] = (kk + .5) * (dz / npcelz) + grid->getZN(i, j, k);
+              
+              reverser = tanh((y[counter]-0.25*Ly)/Llayer);
+              if (y[counter] > 0.5*Ly) reverser = -tanh((y[counter]-0.75*Ly)/Llayer);
+                    
+              // q = charge
+              q[counter] = (qom / fabs(qom)) * (rhoINIT / npcel) * (1.0 / grid->getInvVOL());
+              // u
+              harvest = rand() / (double) RAND_MAX;
+              prob = sqrt(-2.0 * log(1.0 - .999999 * harvest));
+              harvest = rand() / (double) RAND_MAX;
+              theta = 2.0 * M_PI * harvest;
+              mxp = reverser * u0 / sqrt(1.0 - u0*u0) + uth / sqrt(1.0 - uth*uth) * prob * cos(theta);
+              // v
+              myp = v0 / sqrt(1.0 - v0*v0) + vth / sqrt(1.0 - vth*vth) * prob * sin(theta);
+              // w
+              harvest = rand() / (double) RAND_MAX;
+              prob = sqrt(-2.0 * log(1.0 - .999999 * harvest));
+              harvest = rand() / (double) RAND_MAX;
+              theta = 2.0 * M_PI * harvest;
+              mzp = w0 / sqrt(1.0 - w0*w0) + wth / sqrt(1.0 - wth*wth) * prob * cos(theta);
+
+              double g = sqrt(1.0 + mxp*mxp + myp*myp + mzp*mzp);
+              u[counter] = mxp / g;
+              v[counter] = myp / g;
+              w[counter] = mzp / g;
+              
+              if (TrackParticleID)
+                ParticleID[counter] = counter * (unsigned long) pow(10.0, BirthRank[1]) + BirthRank[0];
+
+              counter++;
+            }
+
+
+}
+
 
 
 

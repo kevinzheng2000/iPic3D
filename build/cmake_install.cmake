@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kevinzheng/ipic_tests/iPic3D-git
+# Install script for directory: /Users/kevinzheng/ipic_test2/ipic3d-git
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/cmake_install.cmake")
+  include("/Users/kevinzheng/ipic_test2/ipic3d-git/build/main/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kevinzheng/ipic_tests/iPic3D-git/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/kevinzheng/ipic_test2/ipic3d-git/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

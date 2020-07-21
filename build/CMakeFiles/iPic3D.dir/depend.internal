@@ -39,7 +39,7 @@ CMakeFiles/iPic3D.dir/iPic3D.cpp.o
  ../include/iPic3D.h
  ../include/input_array.h
  ../include/phdf5.h
- /Users/kevinzheng/ipic_tests/iPic3D-git/iPic3D.cpp
+ /Users/kevinzheng/ipic_test2/ipic3d-git/iPic3D.cpp
  /Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include/mpi.h
  /Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include/mpicxx.h
  /Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include/mpio.h
@@ -83,34 +83,3 @@ CMakeFiles/iPic3D.dir/iPic3D.cpp.o
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/H5version.h
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/hdf5.h
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/hdf5_hl.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petsc/private/petscfptimpl.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscao.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscconf.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdm.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdmda.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdmdatypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdmlabel.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdmtypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdrawtypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdstypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscdt.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscerror.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscfe.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscfetypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscfix.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscis.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscistypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscksp.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petsclog.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscmat.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscmath.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscoptions.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscpc.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscpctypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscpf.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscsftypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscsys.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscvec.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscversion.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscviewer.h
- /Users/kevinzheng/prod/opt/libraries/petsc/3.7.6/mpich-3.3.2/include/petscviewertypes.h

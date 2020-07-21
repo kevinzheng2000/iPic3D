@@ -68,6 +68,8 @@ class Collective
     /** getgeometry coild - Coil Spacing */
     double getcoilSpacing();
 
+    /*! Get Llayer of shear flow hyperbolic case */
+    double getLlayer();
 
     /*! Get the number of cells - direction X */
     int getNxc();
@@ -488,6 +490,8 @@ class Collective
     int RestartOutputCycle;
     /*! Output for diagnostics */
     int DiagnosticsOutputCycle;
+    /*! L parameter of shear flow hyperbolic */
+    double Llayer;
 };
 
 #endif

@@ -32,6 +32,9 @@ void Collective::ReadInput(string inputfile) {
     B0x = config.read <double>("B0x");
     B0y = config.read <double>("B0y");
     B0z = config.read <double>("B0z");
+    
+    //shear flow with hyperbolic tangent distribution
+    Llayer = config.read <double>("Llayer");
 
     // Earth parameters
     B1x = config.read <double>("B1x",0.0);
@@ -1377,4 +1380,8 @@ int Collective::getRestartOutputCycle() {
 /*! output of fields */
 int Collective::getDiagnosticsOutputCycle() {
   return (DiagnosticsOutputCycle);
+}
+/*! get Llayer parameter for shear flow hyperbolic */
+double Collective::getLlayer() {
+  return (Llayer);
 }

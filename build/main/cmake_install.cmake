@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kevinzheng/ipic_tests/iPic3D-git/main
+# Install script for directory: /Users/kevinzheng/ipic_test2/ipic3d-git/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/kevinzheng/ipic_tests/iPic3D-git/build/main/H5hut-io/cmake_install.cmake")
+  include("/Users/kevinzheng/ipic_test2/ipic3d-git/build/main/H5hut-io/cmake_install.cmake")
 
 endif()
 

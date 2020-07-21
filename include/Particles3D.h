@@ -130,6 +130,7 @@ class Particles3D:public Particles3Dcomm {
     void MaxwellianFromFluidCell(Grid* grid, Collective *col, int is, int i, int j, int k, int &ip, double *x, double *y, double *z, double *q, double *vx, double *vy, double *vz, unsigned long* ParticleID);
     void twostream1D(Grid * grid, VirtualTopology3D * vct, int mode);
     void shear_flow_relativistic(Grid * grid, VirtualTopology3D * vct);
+    void shear_flow_hyperbolic(Grid * grid, VirtualTopology3D * vct, double Llayer);
 
 };
 

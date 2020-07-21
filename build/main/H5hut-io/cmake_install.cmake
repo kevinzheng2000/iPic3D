@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kevinzheng/ipic_tests/iPic3D-git/H5hut-io
+# Install script for directory: /Users/kevinzheng/ipic_test2/ipic3d-git/H5hut-io
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
