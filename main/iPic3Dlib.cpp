@@ -363,7 +363,7 @@ bool c_Solver::ParticlesMover() {
 	  else{
 		  // #pragma omp task inout(part[i]) in(grid) target_device(booster)
 		  //mem_avail = part[i].mover_PC_sub(grid, vct, EMf); // use the Predictor Corrector scheme
-		  if(col->getCase()=="GEMRelativity" || col->getCase()=="Relativistic" || col->getCase()=="Shear_flow")
+		  if(col->getCase()=="GEMRelativity" || col->getCase()=="Relativistic" || col->getCase()=="Shear_flow" || col->getCase()=="Shear_flow_hyperbolic")
 			  mem_avail = part[i].mover_relativistic(grid, vct, EMf);
 		  else
 			  mem_avail = part[i].mover_PC_old(grid, vct, EMf); // use the Predictor Corrector scheme
