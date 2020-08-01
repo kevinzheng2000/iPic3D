@@ -83,38 +83,3 @@ CMakeFiles/iPic3D.dir/iPic3D.cpp.o
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/H5version.h
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/hdf5.h
  /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include/hdf5_hl.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petsc/private/petscfptimpl.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscao.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscconf.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petsccxxcomplexfix.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdm.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdmda.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdmdatypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdmlabel.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdmtypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdrawtypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdstypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscdt.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscerror.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscfe.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscfetypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscfix.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscis.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscistypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscksp.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petsclog.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscmat.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscmath.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscoptions.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscpc.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscpctypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscpf.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscsectiontypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscsftypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscsys.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscsystypes.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petsctime.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscvec.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscversion.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscviewer.h
- /Users/kevinzheng/prod/opt/libraries/petsc/include/petscviewertypes.h

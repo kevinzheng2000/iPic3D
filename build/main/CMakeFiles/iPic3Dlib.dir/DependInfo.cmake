@@ -47,7 +47,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../main/../H5hut-io/include"
   "/Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include"
   "/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include"
-  "/Users/kevinzheng/prod/opt/libraries/petsc/include"
   )
 
 # Targets to which this target links.

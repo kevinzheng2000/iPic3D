@@ -8,17 +8,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "__INSDIR__="
-  )
-
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include"
   "/Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include"
-  "/Users/kevinzheng/prod/opt/libraries/petsc/include"
   )
 
 # Targets to which this target links.

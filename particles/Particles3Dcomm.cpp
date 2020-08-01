@@ -1094,9 +1094,11 @@ long long Particles3Dcomm::getNOP()  const {
 double Particles3Dcomm::getKe() {
   double localKe = 0.0;
   double totalKe = 0.0;
-  for (register long long i = 0; i < nop; i++)
+  double localgamma = 0.0;
+  for (register long long i = 0; i < nop; i++) {
     localgamma = 1.0 / sqrt(1.0 - u[i] * u[i] - v[i] * v[i] - w[i] * w[i]);
     localKe += (localgamma - 1.0) * (q[i] / qom);
+  }
   MPI_Allreduce(&localKe, &totalKe, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
   return (totalKe);
 }

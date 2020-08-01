@@ -256,16 +256,10 @@ IPIC_H5HUT_OUTPUT:BOOL=ON
 IPIC_PETSC_SOLVER:BOOL=OFF
 
 //Set up the code tests
-IPIC_TESTS:BOOL=ON
-
-//Location of the source files for iPic3D
-IPIC_TESTS_DIR:STRING=/Users/kevinzheng/ipic_test2/ipic3d-git/build/tests
+IPIC_TESTS:BOOL=OFF
 
 //Compile options for Xeon Phi
-IPIC_XEONPHI:BOOL=ON
-
-//Path to a program.
-MAKE_EXECUTABLE:FILEPATH=/usr/bin/make
+IPIC_XEONPHI:BOOL=OFF
 
 //Executable for running MPI programs.
 MPIEXEC_EXECUTABLE:FILEPATH=/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/bin/mpiexec
@@ -344,36 +338,6 @@ MPI_mpicxx_LIBRARY:FILEPATH=/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/lib
 //Location of the pmpi library for MPI
 MPI_pmpi_LIBRARY:FILEPATH=/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/lib/libpmpi.dylib
 
-//PETSc compiler
-PETSC_COMPILER:FILEPATH=mpicc
-
-//Is the configuration for PETSc current?  Set to "NO" to reconfigure.
-PETSC_CURRENT:BOOL=OFF
-
-//PETSc definitions
-PETSC_DEFINITIONS:STRING=-D__INSDIR__=
-
-//PETSc Directory
-PETSC_DIR:PATH=/Users/kevinzheng/prod/opt/libraries/petsc
-
-//PETSc include path
-PETSC_INCLUDES:STRING=/Users/kevinzheng/prod/opt/libraries/petsc/include
-
-//Path to a file.
-PETSC_INCLUDE_CONF:PATH=/Users/kevinzheng/prod/opt/libraries/petsc/include
-
-//Path to a file.
-PETSC_INCLUDE_DIR:PATH=/Users/kevinzheng/petsc/include
-
-//PETSc libraries
-PETSC_LIBRARIES:STRING=/Users/kevinzheng/prod/opt/libraries/petsc/lib/libpetsc.dylib;/Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2clapack.a;/Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2cblas.a;/usr/lib/libdl.dylib
-
-//Cleared
-PETSC_LIBRARY_SINGLE:FILEPATH=/Users/kevinzheng/prod/opt/libraries/petsc/lib/libpetsc.dylib
-
-//Executable for running PETSc MPI programs
-PETSC_MPIEXEC:FILEPATH=mpiexec
-
 //Value Computed by CMake
 iPic3D_BINARY_DIR:STATIC=/Users/kevinzheng/ipic_test2/ipic3d-git/build
 
@@ -384,7 +348,7 @@ iPic3D_SOURCE_DIR:STATIC=/Users/kevinzheng/ipic_test2/ipic3d-git
 iPic3Dlib_BINARY_DIR:STATIC=/Users/kevinzheng/ipic_test2/ipic3d-git/build/main
 
 //Dependencies for the target
-iPic3Dlib_LIB_DEPENDS:STATIC=general;H5hut-io;general;/Users/kevinzheng/prod/opt/libraries/petsc/lib/libpetsc.dylib;general;/Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2clapack.a;general;/Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2cblas.a;general;/usr/lib/libdl.dylib;
+iPic3Dlib_LIB_DEPENDS:STATIC=general;H5hut-io;
 
 //Value Computed by CMake
 iPic3Dlib_SOURCE_DIR:STATIC=/Users/kevinzheng/ipic_test2/ipic3d-git/main
@@ -549,12 +513,6 @@ HDF5_DIFF_EXECUTABLE-ADVANCED:INTERNAL=1
 HDF5_DIR-ADVANCED:INTERNAL=1
 //MODIFIED property for variable: IPIC_H5HUT_OUTPUT
 IPIC_H5HUT_OUTPUT-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: IPIC_PETSC_SOLVER
-IPIC_PETSC_SOLVER-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: IPIC_TESTS
-IPIC_TESTS-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: IPIC_XEONPHI
-IPIC_XEONPHI-MODIFIED:INTERNAL=ON
 //ADVANCED property for variable: MPIEXEC_EXECUTABLE
 MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
@@ -611,70 +569,4 @@ MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
 MPI_mpicxx_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_pmpi_LIBRARY
 MPI_pmpi_LIBRARY-ADVANCED:INTERNAL=1
-//Result of TRY_COMPILE
-MULTIPASS_TEST_1_petsc_works_minimal_COMPILED:INTERNAL=FALSE
-//Test MULTIPASS_TEST_2_petsc_works_minimal
-MULTIPASS_TEST_2_petsc_works_minimal:INTERNAL=
-//Result of TRY_COMPILE
-MULTIPASS_TEST_2_petsc_works_minimal_COMPILED:INTERNAL=FALSE
-//Test MULTIPASS_TEST_3_petsc_works_allincludes
-MULTIPASS_TEST_3_petsc_works_allincludes:INTERNAL=
-//Result of TRY_COMPILE
-MULTIPASS_TEST_3_petsc_works_allincludes_COMPILED:INTERNAL=FALSE
-//Test MULTIPASS_TEST_4_petsc_works_alllibraries
-MULTIPASS_TEST_4_petsc_works_alllibraries:INTERNAL=
-//Result of TRY_COMPILE
-MULTIPASS_TEST_4_petsc_works_alllibraries_COMPILED:INTERNAL=FALSE
-//Test MULTIPASS_TEST_5_petsc_works_all
-MULTIPASS_TEST_5_petsc_works_all:INTERNAL=
-//Result of TRY_COMPILE
-MULTIPASS_TEST_5_petsc_works_all_COMPILED:INTERNAL=FALSE
-//Unique test ID
-MULTIPASS_TEST_COUNT:INTERNAL=5
-//Stored state for PETSc.
-PACKAGE_MULTIPASS_PETSC_ARCH:INTERNAL=
-//Stored state for PETSc.
-PACKAGE_MULTIPASS_PETSC_DIR:INTERNAL=/Users/kevinzheng/prod/opt/libraries/petsc
-//Private
-PACKAGE_MULTIPASS__CALLED:INTERNAL=YES
-//ADVANCED property for variable: PETSC_COMPILER
-PETSC_COMPILER-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: PETSC_CURRENT
-PETSC_CURRENT-MODIFIED:INTERNAL=ON
-//ADVANCED property for variable: PETSC_DEFINITIONS
-PETSC_DEFINITIONS-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: PETSC_DIR
-PETSC_DIR-MODIFIED:INTERNAL=ON
-//ADVANCED property for variable: PETSC_INCLUDES
-PETSC_INCLUDES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PETSC_INCLUDE_CONF
-PETSC_INCLUDE_CONF-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PETSC_INCLUDE_DIR
-PETSC_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PETSC_LIBRARIES
-PETSC_LIBRARIES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PETSC_LIBRARY_SINGLE
-PETSC_LIBRARY_SINGLE-ADVANCED:INTERNAL=1
-//Cleared
-PETSC_LIBRARY_VEC:INTERNAL=NOTFOUND
-//ADVANCED property for variable: PETSC_MPIEXEC
-PETSC_MPIEXEC-ADVANCED:INTERNAL=1
-//Scratch variable
-_lib:INTERNAL=NOTFOUND
-//Cleared
-petsc_cc:INTERNAL=NOTFOUND
-//Cleared
-petsc_cc_flags:INTERNAL=NOTFOUND
-//Cleared
-petsc_cpp_line:INTERNAL=NOTFOUND
-//Cleared
-petsc_include:INTERNAL=NOTFOUND
-//Cleared
-petsc_lib_dir:INTERNAL=NOTFOUND
-//Cleared
-petsc_libs_external:INTERNAL=NOTFOUND
-//Cleared
-petsc_mpiexec:INTERNAL=NOTFOUND
-//Scratch variable
-petscconf:INTERNAL=NOTFOUND
 
