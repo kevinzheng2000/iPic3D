@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacO
 
 CXX_DEFINES = -DPARALLEL_IO -DUSEH5HUT
 
-CXX_INCLUDES = -I/Users/kevinzheng/ipic_test2/ipic3d-git/main/../include -I/Users/kevinzheng/prod/opt/libraries/H5hut/2.0.0/hdf5-1.8.12/mpich-3.3.2/include -I/Users/kevinzheng/ipic_test2/ipic3d-git/main/../H5hut-io/include -I/Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include -I/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include 
+CXX_INCLUDES = -I/Users/kevinzheng/ipic_test2/ipic3d-git/main/../include -I/Users/kevinzheng/prod/opt/libraries/H5hut/2.0.0/hdf5-1.8.12/mpich-3.3.2/include -I/Users/kevinzheng/ipic_test2/ipic3d-git/main/../H5hut-io/include -I/Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/include -I/Users/kevinzheng/prod/opt/compilers/mpich/3.3.2/include -I/Users/kevinzheng/prod/opt/libraries/petsc/include 
 

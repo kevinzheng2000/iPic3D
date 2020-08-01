@@ -108,6 +108,10 @@ iPic3D: /usr/lib/libz.dylib
 iPic3D: /usr/lib/libdl.dylib
 iPic3D: /usr/lib/libm.dylib
 iPic3D: /Users/kevinzheng/prod/opt/libraries/hdf5/1.8.12/mpich-3.3.2/lib/libhdf5_hl.dylib
+iPic3D: /Users/kevinzheng/prod/opt/libraries/petsc/lib/libpetsc.dylib
+iPic3D: /Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2clapack.a
+iPic3D: /Users/kevinzheng/prod/opt/libraries/petsc/lib/libf2cblas.a
+iPic3D: /usr/lib/libdl.dylib
 iPic3D: main/H5hut-io/lib/libH5hut-io.a
 iPic3D: /Users/kevinzheng/prod/opt/libraries/H5hut/2.0.0/hdf5-1.8.12/mpich-3.3.2/lib/libH5hut.a
 iPic3D: CMakeFiles/iPic3D.dir/link.txt

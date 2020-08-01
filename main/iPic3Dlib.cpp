@@ -452,6 +452,10 @@ void c_Solver::InjectBoundaryParticles(){
       }
       else if (col->getCase()=="Relativistic");
       // Do nothing//
+      else if (col->getCase()=="Shear_flow");
+      // Do nothing//
+      else if (col->getCase()=="Shear_flow_hyperbolic");
+      // Do nothing//
       else{
     	     /* --------------------------------------- */
     	      /* Remove particles from depopulation area */
