@@ -310,7 +310,7 @@ void EMfields3D::startEcalc(Grid * grid, VirtualTopology3D * vct, Collective *co
     // move to krylov space 
     phys2solver(bkrylovPoisson, divE, nxc, nyc, nzc);
     // use conjugate gradient first
-    if (!CG(xkrylovPoisson, (nxc - 2) * (nyc - 2) * (nzc - 2), bkrylovPoisson, 3000, CGtol, &Field::PoissonImage, grid, vct, this)) {
+    if (!CG(xkrylovPoisson, (nxc - 2) * (nyc - 2) * (nzc - 2), bkrylovPoisson, 30000, CGtol, &Field::PoissonImage, grid, vct, this)) {
       if (vct->getCartesian_rank() == 0)
         cout << "CG not Converged. Trying with GMRes. Consider to increase the number of the CG iterations" << endl;
       eqValue(0.0, xkrylovPoisson, (nxc - 2) * (nyc - 2) * (nzc - 2));
